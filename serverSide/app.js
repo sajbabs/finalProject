@@ -5,6 +5,8 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 const productRouter = require('./routes/Books.js');
 const authorizeRouter = require('./routes/auth.js');
+const userCartRouter = require('./routes/cart.js');
+const userHistoryRouter = require('./routes/history.js');
 const jwtManager = require('./jwt/jwtManager');
 
 
@@ -38,6 +40,10 @@ app.use('/', (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/authorize', authorizeRouter);
 app.use('/books', productRouter);
+app.use('/cart', userCartRouter);
+app.use('/history', userHistoryRouter);
+
+
 app.use(function (err, req, res, next) {
   console.log(err)
   res.json({ status: 'error' });

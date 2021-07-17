@@ -104,6 +104,7 @@ router.delete("/", function (req, res, next) {
     const books = getAllBooks();
     const book = req.body;
     const newBooks = [];
+    // console.log(book.id);
     books.forEach(oldBook => {
       if (oldBook.id != "" && oldBook.id !== book.id) {
         newBooks.push(oldBook);

@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Tina's Book Store</a>
+                <a class="navbar-brand" href="#">Group C Book Store</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
     <main id="welcome">
         <br>
         <div class="container">
-            <h1>Welcome to Tina's Shop</h1>
+            <h1 id='alert'>Welcome to group C Shop</h1>
         </div>
     </main>
 
@@ -67,30 +67,28 @@
                     <p class="lead">
                     <form id="product-form">
                         <div class="mb-3">
+                            <label for="id" class="form-label">id</label>
+                            <input type="text" class="form-control" id="id">
+                        </div>
+                        <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title">
 
                         </div>
                         <div class="mb-3">
-                            <label for="isbn" class="form-label">ISBN</label>
-                            <input type="text" class="form-control" id="isbn">
+                            <label for="price" class="form-label">price</label>
+                            <input type="text" class="form-control" id="price">
                         </div>
-                        <div class="mb-3">
-                            <label for="publishedDate" class="form-label">Published Date</label>
-                            <input type="text" class="form-control" id="publishedDate">
-                        </div>
-                        <div class="mb-3">
-                            <label for="author" class="form-label">Author</label>
-                            <input type="text" class="form-control" id="author">
-                        </div>
-
                         <button type="submit" class="btn btn-primary" id="product-btn">Submit</button>
                     </form>
+                    <hr class="featurette-divider">
+                    <h2 class="featurette-heading" id="product-heading">Cart</h2>
+                    <div id="divCart" class="row">
+                    </div>
                     </p>
                 </div>
             </div>
         </div>
-        <div id="divData"></div>
 
     </main>
 
