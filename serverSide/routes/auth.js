@@ -13,7 +13,7 @@ router.post('/', function(req,res,next){
         const token = jwt.generate(data);
         res.json({status:'success', accessToken:token, role: 'Admin', userName: username});
     } else if (username === 'Awaab' && pass === 'P@ssw0rd') {
-        const data = {userName: username, passwors: pass, role: "member"};
+        const data = {userName: username, password: pass, role: "member"};
         const jwt = new JwtManager();
         const token = jwt.generate(data);
         res.json({status:'success', accessToken:token, role: 'member', userName: username});

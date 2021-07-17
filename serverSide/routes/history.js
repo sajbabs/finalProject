@@ -36,13 +36,15 @@ router.post('/', (req, res, next) => {
     const header = req.headers.authorization;
     const verify = jwt.verify(header.split(" ")[1]);
     const data = getAllBooksfromCart(verify);
+    console.log(data);
     data.forEach(book => {
         const reserveBook = book.userName + "," + book.book.id + ","
             + book.book.name + "," + book.book.price +"\n";
+            console.log(reserveBook);
         writeToHistoryFile(reserveBook, "a");
         
     });
-    res.json({ status: 'success', data: data });
+    res.json({ status: 'success', message: "Order Placed" });
 
 });
 function getAllBooksfromCart(verify) {
